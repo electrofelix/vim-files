@@ -217,6 +217,8 @@ endif
 if has("autocmd")
     " override defaults for subsets of filetypes
     au BufRead,BufNewFile *.json set shiftwidth=2 softtabstop=4 tabstop=8 expandtab
+    au BufRead,BufNewFile *.sh set shiftwidth=4 softtabstop=4 tabstop=8 expandtab
+    au BufRead,BufNewFile *.bash set shiftwidth=4 softtabstop=4 tabstop=8 expandtab
 
     " then add custom settings
     augroup tcl
@@ -255,4 +257,11 @@ if has("autocmd")
     augroup END
 
     au BufWritePre * let &bex = '-' . strftime("%Y%m%d-%H%M%S") . '.vimbackup'
+
+    autocmd ColorScheme,BufWinEnter * highlight ExtraWhitespace ctermbg=red guibg=red
+    autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$\|\t\+/
+    autocmd InsertLeave,BufRead,BufNewFile * match ExtraWhitespace /\s\+$\|\t\+/
+    autocmd BufWinLeave * call clearmatches()
+    highlight ExtraWhitespace ctermbg=red guibg=red
+    match ExtraWhitespace /\s\+$\|\t\+/
 endif
