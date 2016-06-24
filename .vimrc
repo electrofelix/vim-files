@@ -82,6 +82,17 @@ helptags ~/.vim/doc
 set shellslash
 let g:tex_flavor='latex'
 
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'Valloric/YouCompleteMe'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
+
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
 
