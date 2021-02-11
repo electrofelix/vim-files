@@ -91,6 +91,8 @@ Plugin 'JamshedVesuna/vim-markdown-preview'
 
 Plugin 'fatih/vim-go'
 
+Plugin 'mzlogin/vim-markdown-toc'
+
 " Provided by xenial
 "Plugin 'Valloric/YouCompleteMe'
 
