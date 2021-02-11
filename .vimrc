@@ -87,12 +87,20 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'JamshedVesuna/vim-markdown-preview'
+
+Plugin 'fatih/vim-go'
+
 " Provided by xenial
 "Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
+let vim_markdown_preview_github=1 " use grip for github flavour markdown
+let vim_markdown_preview_browser='Mozilla Firefox' " bugfix for window name searching
+let vim_markdown_preview_toggle=1 " display on Ctrl+P with images
+let vim_markdown_preview_use_xdg_open=1
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
