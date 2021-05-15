@@ -1,2 +1,4 @@
 *.py[oc]
 /backups/
+/bundle
+/doc/tags
