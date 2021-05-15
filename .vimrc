@@ -93,6 +93,8 @@ Plugin 'fatih/vim-go'
 
 Plugin 'mzlogin/vim-markdown-toc'
 
+Plugin 'vim-ruby/vim-ruby'
+
 " Provided by xenial
 "Plugin 'Valloric/YouCompleteMe'
 
